@@ -1,0 +1,55 @@
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.btn-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.badge {
+  padding: 6px 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn-group .btn {
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  cursor: pointer;
+}

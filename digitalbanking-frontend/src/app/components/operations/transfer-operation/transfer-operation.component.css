@@ -1,0 +1,11 @@
+.invalid-feedback {
+  display: block;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+}

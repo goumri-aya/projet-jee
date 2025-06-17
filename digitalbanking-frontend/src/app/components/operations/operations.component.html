@@ -1,0 +1,200 @@
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col">
+      <h1>Operations</h1>
+      <p class="text-muted">Perform operations on accounts</p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs mb-4">
+            <li [ngbNavItem]="1">
+              <a ngbNavLink>Debit / Credit</a>
+              <ng-template ngbNavContent>
+                <div *ngIf="errorMessage" class="alert alert-danger">
+                  {{ errorMessage }}
+                </div>
+                
+                <div *ngIf="successMessage" class="alert alert-success">
+                  {{ successMessage }}
+                </div>
+                
+                <form [formGroup]="operationForm" (ngSubmit)="onOperationSubmit()">
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="accountId" class="form-label">Account</label>
+                      <select 
+                        class="form-select" 
+                        id="accountId" 
+                        formControlName="accountId"
+                        [ngClass]="{'is-invalid': operationForm.controls['accountId'].invalid && operationForm.controls['accountId'].touched}"
+                      >
+                        <option value="">Select an account</option>
+                        <option *ngFor="let account of accounts" [value]="account.id">
+                          {{ getAccountLabel(account) }} - Balance: {{ account.balance | currency }}
+                        </option>
+                      </select>
+                      <div *ngIf="operationForm.controls['accountId'].invalid && operationForm.controls['accountId'].touched" class="invalid-feedback">
+                        Account is required
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="operationType" class="form-label">Operation Type</label>
+                      <select 
+                        class="form-select" 
+                        id="operationType" 
+                        formControlName="operationType"
+                      >
+                        <option value="CREDIT">CREDIT</option>
+                        <option value="DEBIT">DEBIT</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="amount" class="form-label">Amount</label>
+                      <input 
+                        type="number" 
+                        class="form-control" 
+                        id="amount" 
+                        formControlName="amount"
+                        [ngClass]="{'is-invalid': operationForm.controls['amount'].invalid && operationForm.controls['amount'].touched}"
+                        min="0.01"
+                        step="0.01"
+                      >
+                      <div *ngIf="operationForm.controls['amount'].invalid && operationForm.controls['amount'].touched" class="invalid-feedback">
+                        <div *ngIf="operationForm.controls['amount'].errors?.['required']">Amount is required</div>
+                        <div *ngIf="operationForm.controls['amount'].errors?.['min']">Amount must be greater than 0</div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="description" class="form-label">Description</label>
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        id="description" 
+                        formControlName="description"
+                        [ngClass]="{'is-invalid': operationForm.controls['description'].invalid && operationForm.controls['description'].touched}"
+                      >
+                      <div *ngIf="operationForm.controls['description'].invalid && operationForm.controls['description'].touched" class="invalid-feedback">
+                        Description is required
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary" [disabled]="operationForm.invalid || isLoading">
+                      <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Execute Operation
+                    </button>
+                  </div>
+                </form>
+              </ng-template>
+            </li>
+            
+            <li [ngbNavItem]="2">
+              <a ngbNavLink>Transfer</a>
+              <ng-template ngbNavContent>
+                <div *ngIf="errorMessage" class="alert alert-danger">
+                  {{ errorMessage }}
+                </div>
+                
+                <div *ngIf="successMessage" class="alert alert-success">
+                  {{ successMessage }}
+                </div>
+                
+                <form [formGroup]="transferForm" (ngSubmit)="onTransferSubmit()">
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="sourceAccountId" class="form-label">From Account</label>
+                      <select 
+                        class="form-select" 
+                        id="sourceAccountId" 
+                        formControlName="sourceAccountId"
+                        [ngClass]="{'is-invalid': transferForm.controls['sourceAccountId'].invalid && transferForm.controls['sourceAccountId'].touched}"
+                      >
+                        <option value="">Select source account</option>
+                        <option *ngFor="let account of accounts" [value]="account.id">
+                          {{ getAccountLabel(account) }} - Balance: {{ account.balance | currency }}
+                        </option>
+                      </select>
+                      <div *ngIf="transferForm.controls['sourceAccountId'].invalid && transferForm.controls['sourceAccountId'].touched" class="invalid-feedback">
+                        Source account is required
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="destinationAccountId" class="form-label">To Account</label>
+                      <select 
+                        class="form-select" 
+                        id="destinationAccountId" 
+                        formControlName="destinationAccountId"
+                        [ngClass]="{'is-invalid': transferForm.controls['destinationAccountId'].invalid && transferForm.controls['destinationAccountId'].touched}"
+                      >
+                        <option value="">Select destination account</option>
+                        <option *ngFor="let account of accounts" [value]="account.id">
+                          {{ getAccountLabel(account) }}
+                        </option>
+                      </select>
+                      <div *ngIf="transferForm.controls['destinationAccountId'].invalid && transferForm.controls['destinationAccountId'].touched" class="invalid-feedback">
+                        Destination account is required
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="transferAmount" class="form-label">Amount</label>
+                      <input 
+                        type="number" 
+                        class="form-control" 
+                        id="transferAmount" 
+                        formControlName="amount"
+                        [ngClass]="{'is-invalid': transferForm.controls['amount'].invalid && transferForm.controls['amount'].touched}"
+                        min="0.01"
+                        step="0.01"
+                      >
+                      <div *ngIf="transferForm.controls['amount'].invalid && transferForm.controls['amount'].touched" class="invalid-feedback">
+                        <div *ngIf="transferForm.controls['amount'].errors?.['required']">Amount is required</div>
+                        <div *ngIf="transferForm.controls['amount'].errors?.['min']">Amount must be greater than 0</div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="transferDescription" class="form-label">Description</label>
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        id="transferDescription" 
+                        formControlName="description"
+                        [ngClass]="{'is-invalid': transferForm.controls['description'].invalid && transferForm.controls['description'].touched}"
+                      >
+                      <div *ngIf="transferForm.controls['description'].invalid && transferForm.controls['description'].touched" class="invalid-feedback">
+                        Description is required
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary" [disabled]="transferForm.invalid || isLoading">
+                      <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Execute Transfer
+                    </button>
+                  </div>
+                </form>
+              </ng-template>
+            </li>
+          </ul>
+          
+          <div [ngbNavOutlet]="nav"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

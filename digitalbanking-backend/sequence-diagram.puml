@@ -1,0 +1,131 @@
+@startuml Digital Banking - Sequence Diagram
+
+' Style settings
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam sequenceGroupBorderThickness 2
+skinparam shadowing false
+
+' Participants
+actor "User" as User
+participant "Frontend\nAngular App" as Frontend
+participant "AuthController" as AuthController
+participant "SecurityService" as SecurityService
+participant "JWTService" as JWTService
+participant "BankAccountController" as BankAccountController
+participant "BankAccountService" as BankAccountService
+participant "Repository" as Repository
+database "Database" as DB
+
+' Authentication Flow
+group Authentication
+    User -> Frontend: 1. Login (username, password)
+    Frontend -> AuthController: 2. POST /api/auth/login
+    AuthController -> SecurityService: 3. Authenticate(username, password)
+    SecurityService -> Repository: 4. Find user
+    Repository -> DB: 5. Query user
+    DB --> Repository: 6. User data
+    Repository --> SecurityService: 7. Return user
+    SecurityService --> AuthController: 8. Authentication result
+    alt Successful authentication
+        AuthController -> JWTService: 9. Generate JWT token
+        JWTService --> AuthController: 10. JWT token
+        AuthController --> Frontend: 11. Return token + user info
+        Frontend -> Frontend: 12. Store token in localStorage
+    else Authentication failed
+        AuthController --> Frontend: 9. Authentication error
+        Frontend -> User: 10. Show error message
+    end
+end
+
+' Account Operations Flow
+group Bank Account Operations
+    User -> Frontend: 1. Request account operations
+    Frontend -> Frontend: 2. Add JWT token to request header
+    Frontend -> BankAccountController: 3. GET /api/accounts/{id}
+    
+    BankAccountController -> JWTService: 4. Validate token
+    JWTService --> BankAccountController: 5. Token validation result
+    
+    alt Valid Token
+        BankAccountController -> BankAccountService: 6. Get account details
+        BankAccountService -> Repository: 7. Find account
+        Repository -> DB: 8. Query account
+        DB --> Repository: 9. Account data
+        Repository --> BankAccountService: 10. Return account
+        BankAccountService --> BankAccountController: 11. Account details
+        BankAccountController --> Frontend: 12. Return account details
+        Frontend -> User: 13. Display account information
+    else Invalid Token
+        BankAccountController --> Frontend: 6. Unauthorized (401)
+        Frontend -> User: 7. Redirect to login
+    end
+end
+
+' Fund Transfer Flow
+group Fund Transfer
+    User -> Frontend: 1. Transfer funds (source, destination, amount)
+    Frontend -> Frontend: 2. Add JWT token to request header
+    Frontend -> BankAccountController: 3. POST /api/accounts/transfer
+    
+    BankAccountController -> JWTService: 4. Validate token
+    JWTService --> BankAccountController: 5. Token validation result
+    
+    alt Valid Token
+        BankAccountController -> BankAccountService: 6. Transfer funds
+        
+        BankAccountService -> Repository: 7. Find source account
+        Repository -> DB: 8. Query source account
+        DB --> Repository: 9. Source account data
+        Repository --> BankAccountService: 10. Return source account
+        
+        BankAccountService -> Repository: 11. Find destination account
+        Repository -> DB: 12. Query destination account
+        DB --> Repository: 13. Destination account data
+        Repository --> BankAccountService: 14. Return destination account
+        
+        alt Sufficient Balance
+            BankAccountService -> Repository: 15. Debit source account
+            Repository -> DB: 16. Update source account
+            BankAccountService -> Repository: 17. Credit destination account
+            Repository -> DB: 18. Update destination account
+            BankAccountService -> Repository: 19. Create operations records
+            Repository -> DB: 20. Save operations
+            DB --> Repository: 21. Operations saved
+            Repository --> BankAccountService: 22. Operations created
+            BankAccountService --> BankAccountController: 23. Transfer successful
+            BankAccountController --> Frontend: 24. Transfer confirmation
+            Frontend -> User: 25. Show success message
+        else Insufficient Balance
+            BankAccountService --> BankAccountController: 15. Balance not sufficient
+            BankAccountController --> Frontend: 16. Transfer failed
+            Frontend -> User: 17. Show error message
+        end
+    else Invalid Token
+        BankAccountController --> Frontend: 6. Unauthorized (401)
+        Frontend -> User: 7. Redirect to login
+    end
+end
+
+' Customer Management Flow
+group Customer Management (Admin Only)
+    User -> Frontend: 1. Access customer management
+    Frontend -> Frontend: 2. Add JWT token to request header
+    Frontend -> AuthController: 3. Check user roles
+    
+    alt User has ADMIN role
+        Frontend -> BankAccountController: 4. GET /api/customers
+        BankAccountController -> BankAccountService: 5. List customers
+        BankAccountService -> Repository: 6. Find all customers
+        Repository -> DB: 7. Query customers
+        DB --> Repository: 8. Customers data
+        Repository --> BankAccountService: 9. Return customers
+        BankAccountService --> BankAccountController: 10. Customers list
+        BankAccountController --> Frontend: 11. Return customers list
+        Frontend -> User: 12. Display customers management interface
+    else User has USER role only
+        Frontend -> User: 4. Show access denied message
+    end
+end
+
+@enduml

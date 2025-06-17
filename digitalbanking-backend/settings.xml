@@ -1,0 +1,21 @@
+<settings>
+  <proxies>
+    <proxy>
+      <id>company-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>proxy.company.com</host>
+      <port>8080</port>
+      <nonProxyHosts>localhost|127.0.0.1|*.company.com</nonProxyHosts>
+    </proxy>
+  </proxies>
+  
+  <mirrors>
+    <mirror>
+      <id>central-mirror</id>
+      <name>Central Repository Mirror</name>
+      <url>https://repo1.maven.org/maven2</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+</settings>

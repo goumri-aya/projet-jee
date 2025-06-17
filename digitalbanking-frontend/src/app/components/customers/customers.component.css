@@ -1,0 +1,21 @@
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.btn-group .btn {
+  border-radius: 4px;
+  margin-right: 3px;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  cursor: pointer;
+}

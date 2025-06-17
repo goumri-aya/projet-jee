@@ -1,0 +1,2944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ma.digitbank.jeespringangularjwtdigitalbanking.JeeSpringAngularJwtDigitalBankingApplicationTests" time="11.878" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend\target\test-classes;C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend\target\classes;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.3\spring-boot-starter-data-jpa-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.3\spring-boot-starter-aop-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.3\spring-boot-starter-jdbc-3.2.3.jar;C:\Users\oxenox\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-jdbc\6.1.4\spring-jdbc-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\oxenox\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\oxenox\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\oxenox\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\oxenox\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\oxenox\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\oxenox\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\oxenox\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\oxenox\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\oxenox\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\oxenox\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\oxenox\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\oxenox\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\oxenox\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\oxenox\.m2\repository\org\springframework\data\spring-data-jpa\3.2.3\spring-data-jpa-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-orm\6.1.4\spring-orm-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-tx\6.1.4\spring-tx-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\oxenox\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\oxenox\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-aspects\6.1.4\spring-aspects-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.3\spring-boot-starter-security-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\oxenox\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\oxenox\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\oxenox\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\oxenox\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\oxenox\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\oxenox\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-config\6.2.2\spring-security-config-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-web\6.2.2\spring-security-web-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.3\spring-boot-starter-web-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.3\spring-boot-starter-tomcat-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.19\tomcat-embed-core-10.1.19.jar;C:\Users\oxenox\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.19\tomcat-embed-websocket-10.1.19.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\oxenox\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\oxenox\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-webmvc\6.1.4\spring-webmvc-6.1.4.jar;C:\Users\oxenox\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\oxenox\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\oxenox\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\oxenox\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\oxenox\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\oxenox\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\oxenox\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\oxenox\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\oxenox\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\oxenox\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\oxenox\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\oxenox\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\oxenox\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\oxenox\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\oxenox\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\oxenox\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\oxenox\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\oxenox\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\oxenox\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-test\6.2.2\spring-security-test-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-core\6.2.2\spring-security-core-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-crypto\6.2.2\spring-security-crypto-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.3\spring-boot-starter-validation-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\oxenox\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\oxenox\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-devtools\3.2.3\spring-boot-devtools-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\mapstruct\mapstruct\1.5.5.Final\mapstruct-1.5.5.Final.jar;C:\Users\oxenox\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\oxenox\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\oxenox\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\oxenox\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\oxenox\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\oxenox\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\oxenox\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\oxenox\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\oxenox\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\oxenox\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\oxenox\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\oxenox\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Casablanca"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\oxenox\AppData\Local\Temp\surefire7767519514466658957\surefirebooter-20250529033833696_3.jar C:\Users\oxenox\AppData\Local\Temp\surefire7767519514466658957 2025-05-29T03-38-31_973-jvmRun1 surefire-20250529033833696_1tmp surefire_0-20250529033833696_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend\target\test-classes;C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend\target\classes;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.3\spring-boot-starter-data-jpa-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.3\spring-boot-starter-aop-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.3\spring-boot-starter-jdbc-3.2.3.jar;C:\Users\oxenox\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-jdbc\6.1.4\spring-jdbc-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\hibernate\orm\hibernate-core\6.4.4.Final\hibernate-core-6.4.4.Final.jar;C:\Users\oxenox\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\oxenox\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\oxenox\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\oxenox\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\oxenox\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\oxenox\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\oxenox\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\oxenox\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\oxenox\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\oxenox\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\oxenox\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\oxenox\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\oxenox\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\oxenox\.m2\repository\org\springframework\data\spring-data-jpa\3.2.3\spring-data-jpa-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-orm\6.1.4\spring-orm-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-tx\6.1.4\spring-tx-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\oxenox\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\oxenox\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-aspects\6.1.4\spring-aspects-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.3\spring-boot-starter-security-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\oxenox\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\oxenox\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\oxenox\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\oxenox\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\oxenox\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\oxenox\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-config\6.2.2\spring-security-config-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-web\6.2.2\spring-security-web-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.3\spring-boot-starter-web-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.3\spring-boot-starter-json-3.2.3.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.3\spring-boot-starter-tomcat-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.19\tomcat-embed-core-10.1.19.jar;C:\Users\oxenox\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.19\tomcat-embed-websocket-10.1.19.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-web\6.1.4\spring-web-6.1.4.jar;C:\Users\oxenox\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\oxenox\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-webmvc\6.1.4\spring-webmvc-6.1.4.jar;C:\Users\oxenox\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\oxenox\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\oxenox\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\oxenox\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\oxenox\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\oxenox\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\oxenox\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\oxenox\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\oxenox\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\oxenox\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\oxenox\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\oxenox\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\oxenox\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\oxenox\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\oxenox\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\oxenox\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\oxenox\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\oxenox\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\oxenox\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\oxenox\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\oxenox\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-test\6.2.2\spring-security-test-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-core\6.2.2\spring-security-core-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\security\spring-security-crypto\6.2.2\spring-security-crypto-6.2.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.3\spring-boot-starter-validation-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.19\tomcat-embed-el-10.1.19.jar;C:\Users\oxenox\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\oxenox\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-devtools\3.2.3\spring-boot-devtools-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\oxenox\.m2\repository\org\mapstruct\mapstruct\1.5.5.Final\mapstruct-1.5.5.Final.jar;C:\Users\oxenox\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\oxenox\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\oxenox\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\oxenox\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\oxenox\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\oxenox\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\oxenox\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.4\jackson-dataformat-yaml-2.15.4.jar;C:\Users\oxenox\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\oxenox\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\oxenox\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;C:\Users\oxenox\.m2\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;C:\Users\oxenox\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\oxenox\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\oxenox"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="windows-1252"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\oxenox\AppData\Local\Temp\surefire7767519514466658957\surefirebooter-20250529033833696_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="oxenox"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\oxenox\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\oxenox\AppData\Local\Temp\"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="1900"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\oxenox\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\oxenox\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\oxenox\AppData\Local\Programs\Python\Python313\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\Windows\System32;C:\Users\oxenox\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\oxenox\AppData\Local\Programs\Python\Python313\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program File;C:\Program Files\PostgreSQL\17\bin;C:\Program Files\apache-maven-3.9.9\bin;C:\Users\oxenox\AppData\Local\Programs\Ollama;C:\hadoop-3.3.6\bin;C:\Program Files\Java\jdk-17\bin;C:\hadoop-3.3.6&#10;\bin;C:\apache-hive-4.0.1-bin\bin;C:\hive\bin;C:\Users\oxenox\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\oxenox\AppData\Local\Programs\Python\Python312\;C:\Users\oxenox\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\oxenox\AppData\Local\Programs\Python\Python313\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\oxenox\AppData\Local\Programs\Python\Launcher\;C:\Users\oxenox\AppData\Local\Microsoft\WindowsApps;C:\Users\oxenox\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\oxenox\AppData\Roaming\npm;C:\Python34\Scripts;C:\Users\oxenox\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.5\bin;;C:\Users\oxenox\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\oxenox\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[JEE-Spring-Angular-JWT---Digital-Banking] "/>
+  </properties>
+  <testcase name="contextLoads" classname="ma.digitbank.jeespringangularjwtdigitalbanking.JeeSpringAngularJwtDigitalBankingApplicationTests" time="0.799">
+    <system-out><![CDATA[03:38:34.870 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ma.digitbank.jeespringangularjwtdigitalbanking.JeeSpringAngularJwtDigitalBankingApplicationTests]: JeeSpringAngularJwtDigitalBankingApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:38:35.017 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ma.digitbank.jeespringangularjwtdigitalbanking.JeeSpringAngularJwtDigitalBankingApplication for test class ma.digitbank.jeespringangularjwtdigitalbanking.JeeSpringAngularJwtDigitalBankingApplicationTests
+03:38:35.331 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-05-29T03:38:35.708+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] AngularJwtDigitalBankingApplicationTests : Starting JeeSpringAngularJwtDigitalBankingApplicationTests using Java 17.0.12 with PID 1900 (started by oxenox in C:\Users\oxenox\Desktop\digitalBanking\digitalbanking-backend)
+2025-05-29T03:38:35.709+01:00 DEBUG 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] AngularJwtDigitalBankingApplicationTests : Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-29T03:38:35.710+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] AngularJwtDigitalBankingApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-05-29T03:38:37.335+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T03:38:37.446+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 5 JPA repository interfaces.
+2025-05-29T03:38:38.435+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T03:38:38.590+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-29T03:38:38.669+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T03:38:39.237+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T03:38:39.291+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-29T03:38:39.708+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-29T03:38:39.711+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-29T03:38:39.754+01:00  WARN 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29T03:38:41.419+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table account_operation (
+        id bigint generated by default as identity,
+        amount float(53) not null,
+        created_by varchar(255),
+        description varchar(255),
+        operation_date timestamp(6),
+        type varchar(255) check (type in ('DEBIT','CREDIT')),
+        bank_account_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table app_role (
+        id bigint generated by default as identity,
+        role_name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table app_user (
+        id bigint generated by default as identity,
+        active boolean not null,
+        password varchar(255),
+        username varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table app_user_roles (
+        app_user_id bigint not null,
+        roles_id bigint not null
+    )
+Hibernate: 
+    create table bank_account (
+        type varchar(10) not null,
+        id varchar(255) not null,
+        balance float(53) not null,
+        created_at timestamp(6),
+        created_by varchar(255),
+        currency varchar(255),
+        last_modified_by varchar(255),
+        status varchar(255) check (status in ('CREATED','ACTIVATED','SUSPENDED','BLOCKED')),
+        over_draft float(53),
+        interest_rate float(53),
+        customer_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table customer (
+        id bigint generated by default as identity,
+        created_by varchar(255),
+        email varchar(255),
+        last_modified_by varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists app_user 
+       drop constraint if exists UK_3k4cplvh82srueuttfkwnylq0
+Hibernate: 
+    alter table if exists app_user 
+       add constraint UK_3k4cplvh82srueuttfkwnylq0 unique (username)
+Hibernate: 
+    alter table if exists account_operation 
+       add constraint FKmimm8esca3p6ux3s6bdwvu1cn 
+       foreign key (bank_account_id) 
+       references bank_account
+Hibernate: 
+    alter table if exists app_user_roles 
+       add constraint FK1pfb2loa8so5oi6ak7rh6enva 
+       foreign key (roles_id) 
+       references app_role
+Hibernate: 
+    alter table if exists app_user_roles 
+       add constraint FKkwxexnudtp5gmt82j0qtytnoe 
+       foreign key (app_user_id) 
+       references app_user
+Hibernate: 
+    alter table if exists bank_account 
+       add constraint FKj818ht4ban0c4uw4bmsbf3jme 
+       foreign key (customer_id) 
+       references customer
+2025-05-29T03:38:41.525+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T03:38:42.067+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-29T03:38:43.033+01:00  WARN 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T03:38:43.631+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24d998ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f514364, org.springframework.security.web.context.SecurityContextHolderFilter@1f9009d3, org.springframework.security.web.header.HeaderWriterFilter@299022a9, org.springframework.web.filter.CorsFilter@33544cc5, org.springframework.security.web.authentication.logout.LogoutFilter@2fc2d1f0, ma.digitbank.jeespringangularjwtdigitalbanking.security.filter.JwtAuthenticationFilter@475454ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56394880, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23c3f787, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@99e03a9, org.springframework.security.web.session.SessionManagementFilter@7f6c85c4, org.springframework.security.web.access.ExceptionTranslationFilter@113a7d12, org.springframework.security.web.access.intercept.AuthorizationFilter@3b30409]
+2025-05-29T03:38:44.297+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-05-29T03:38:44.422+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] AngularJwtDigitalBankingApplicationTests : Started JeeSpringAngularJwtDigitalBankingApplicationTests in 9.121 seconds (process running for 10.586)
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    insert 
+    into
+        app_role
+        (role_name, id) 
+    values
+        (?, default)
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    insert 
+    into
+        app_role
+        (role_name, id) 
+    values
+        (?, default)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.active,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    insert 
+    into
+        app_user
+        (active, password, username, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.active,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    insert 
+    into
+        app_user
+        (active, password, username, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.active,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_id=?
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_id, roles_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.active,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_id=?
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    delete 
+    from
+        app_user_roles 
+    where
+        app_user_id=?
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_id, roles_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_id, roles_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        au1_0.id,
+        au1_0.active,
+        au1_0.password,
+        au1_0.username 
+    from
+        app_user au1_0 
+    where
+        au1_0.username=?
+Hibernate: 
+    select
+        r1_0.app_user_id,
+        r1_1.id,
+        r1_1.role_name 
+    from
+        app_user_roles r1_0 
+    join
+        app_role r1_1 
+            on r1_1.id=r1_0.roles_id 
+    where
+        r1_0.app_user_id=?
+Hibernate: 
+    select
+        ar1_0.id,
+        ar1_0.role_name 
+    from
+        app_role ar1_0 
+    where
+        ar1_0.role_name=?
+Hibernate: 
+    insert 
+    into
+        app_user_roles
+        (app_user_id, roles_id) 
+    values
+        (?, ?)
+Seeding database with sample data...
+2025-05-29T03:38:45.154+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] m.d.j.services.BankAccountServiceImpl    : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (created_by, email, last_modified_by, name, phone, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.created_at,
+        ca1_0.created_by,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ca1_0.last_modified_by,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CURRENT' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'CURRENT', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.created_at,
+        sa1_0.created_by,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        sa1_0.last_modified_by,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SAVING' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'SAVING', ?)
+2025-05-29T03:38:45.206+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] m.d.j.services.BankAccountServiceImpl    : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (created_by, email, last_modified_by, name, phone, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.created_at,
+        ca1_0.created_by,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ca1_0.last_modified_by,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CURRENT' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'CURRENT', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.created_at,
+        sa1_0.created_by,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        sa1_0.last_modified_by,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SAVING' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'SAVING', ?)
+2025-05-29T03:38:45.224+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] m.d.j.services.BankAccountServiceImpl    : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (created_by, email, last_modified_by, name, phone, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.created_at,
+        ca1_0.created_by,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ca1_0.last_modified_by,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CURRENT' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'CURRENT', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.created_at,
+        sa1_0.created_by,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        sa1_0.last_modified_by,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SAVING' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'SAVING', ?)
+2025-05-29T03:38:45.256+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] m.d.j.services.BankAccountServiceImpl    : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (created_by, email, last_modified_by, name, phone, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.created_at,
+        ca1_0.created_by,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ca1_0.last_modified_by,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CURRENT' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'CURRENT', ?)
+2025-05-29T03:38:45.266+01:00  INFO 1900 --- [JEE-Spring-Angular-JWT---Digital-Banking] [           main] m.d.j.services.BankAccountServiceImpl    : Saving new Customer
+Hibernate: 
+    insert 
+    into
+        customer
+        (created_by, email, last_modified_by, name, phone, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.balance,
+        ca1_0.created_at,
+        ca1_0.created_by,
+        ca1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ca1_0.last_modified_by,
+        ca1_0.status,
+        ca1_0.over_draft 
+    from
+        bank_account ca1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ca1_0.customer_id 
+    where
+        ca1_0.type='CURRENT' 
+        and ca1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, over_draft, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'CURRENT', ?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        sa1_0.id,
+        sa1_0.balance,
+        sa1_0.created_at,
+        sa1_0.created_by,
+        sa1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        sa1_0.last_modified_by,
+        sa1_0.status,
+        sa1_0.interest_rate 
+    from
+        bank_account sa1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=sa1_0.customer_id 
+    where
+        sa1_0.type='SAVING' 
+        and sa1_0.id=?
+Hibernate: 
+    insert 
+    into
+        bank_account
+        (balance, created_at, created_by, currency, customer_id, last_modified_by, status, interest_rate, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, 'SAVING', ?)
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        ba1_0.customer_id,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        over_draft=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ba1_0.id,
+        ba1_0.type,
+        ba1_0.balance,
+        ba1_0.created_at,
+        ba1_0.created_by,
+        ba1_0.currency,
+        c1_0.id,
+        c1_0.created_by,
+        c1_0.email,
+        c1_0.last_modified_by,
+        c1_0.name,
+        c1_0.phone,
+        ba1_0.last_modified_by,
+        ba1_0.status,
+        ba1_0.over_draft,
+        ba1_0.interest_rate 
+    from
+        bank_account ba1_0 
+    left join
+        customer c1_0 
+            on c1_0.id=ba1_0.customer_id 
+    where
+        ba1_0.id=?
+Hibernate: 
+    insert 
+    into
+        account_operation
+        (amount, bank_account_id, created_by, description, operation_date, type, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    update
+        bank_account 
+    set
+        balance=?,
+        created_at=?,
+        created_by=?,
+        currency=?,
+        customer_id=?,
+        last_modified_by=?,
+        status=?,
+        interest_rate=? 
+    where
+        id=?
+Database seeding complete!
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,294 @@
+@startuml Digital Banking Backend - Class Diagram
+
+' Style settings
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+skinparam shadowing false
+skinparam linetype ortho
+
+' Package Entities
+package "Entities" {
+  abstract class BankAccount {
+    -id: String
+    -balance: double
+    -createdAt: Date
+    -currency: String
+    -status: AccountStatus
+    -createdBy: String
+    -lastModifiedBy: String
+  }
+  
+  class SavingAccount {
+    -interestRate: double
+  }
+  
+  class CurrentAccount {
+    -overDraft: double
+  }
+  
+  class Customer {
+    -id: Long
+    -name: String
+    -email: String
+    -phone: String
+    -createdBy: String
+    -lastModifiedBy: String
+  }
+  
+  class AccountOperation {
+    -id: Long
+    -operationDate: Date
+    -amount: double
+    -description: String
+    -type: OperationType
+    -createdBy: String
+  }
+}
+
+' Package Security Entities
+package "Security Entities" {
+  class AppUser {
+    -id: Long
+    -username: String
+    -password: String
+    -active: boolean
+  }
+  
+  class AppRole {
+    -id: Long
+    -roleName: String
+  }
+}
+
+' Package Services
+package "Services" {
+  interface BankAccountService {
+    +saveCustomer(customerDTO: CustomerDTO): CustomerDTO
+    +updateCustomer(customerDTO: CustomerDTO): CustomerDTO
+    +deleteCustomer(customerId: Long): void
+    +listCustomers(): List<CustomerDTO>
+    +searchCustomers(keyword: String): List<CustomerDTO>
+    +getCustomer(customerId: Long): CustomerDTO
+    +saveCurrentBankAccount(initialBalance: double, overDraft: double, customerId: Long): CurrentAccountDTO
+    +saveSavingBankAccount(initialBalance: double, interestRate: double, customerId: Long): SavingAccountDTO
+    +listBankAccounts(): List<BankAccountDTO>
+    +getCustomerAccounts(customerId: Long): List<BankAccountDTO>
+    +getBankAccount(accountId: String): BankAccountDTO
+    +debit(accountId: String, amount: double, description: String): void
+    +credit(accountId: String, amount: double, description: String): void
+    +transfer(accountIdSource: String, accountIdDestination: String, amount: double): void
+    +accountOperationHistory(accountId: String): List<AccountOperationDTO>
+    +accountHistory(accountId: String, page: int, size: int): AccountHistoryDTO
+  }
+  
+  class BankAccountServiceImpl {
+    -customerRepository: CustomerRepository
+    -bankAccountRepository: BankAccountRepository
+    -accountOperationRepository: AccountOperationRepository
+    -dtoMapper: BankAccountMapperImpl
+  }
+  
+  interface SecurityService {
+    +saveNewUser(username: String, password: String, confirmedPassword: String): AppUser
+    +saveNewRole(roleName: String): AppRole
+    +addRoleToUser(username: String, roleName: String): void
+    +removeRoleFromUser(username: String, roleName: String): void
+    +loadUserByUsername(username: String): AppUser
+    +listUsers(): List<AppUser>
+    +changePassword(username: String, oldPassword: String, newPassword: String): boolean
+  }
+  
+  class SecurityServiceImpl {
+    -appUserRepository: AppUserRepository
+    -appRoleRepository: AppRoleRepository
+    -passwordEncoder: PasswordEncoder
+  }
+  
+  class JWTService {
+    -secretKey: String
+    -jwtExpiration: long
+    -refreshExpiration: long
+    +extractUsername(token: String): String
+    +generateToken(userDetails: UserDetails): String
+    +isTokenValid(token: String, userDetails: UserDetails): boolean
+  }
+}
+
+' Package Controllers
+package "Controllers" {
+  class CustomerRestController {
+    -bankAccountService: BankAccountService
+  }
+  
+  class BankAccountRestController {
+    -bankAccountService: BankAccountService
+  }
+  
+  class AuthController {
+    -authenticationManager: AuthenticationManager
+    -jwtUtils: JwtUtils
+    -securityService: SecurityService
+  }
+  
+  class UserManagementController {
+    -securityService: SecurityService
+  }
+}
+
+' Package Repositories
+package "Repositories" {
+  interface CustomerRepository {
+    +findByNameContainsIgnoreCase(keyword: String): List<Customer>
+    +findByEmail(email: String): Customer
+  }
+  
+  interface BankAccountRepository {
+    +findByCustomerId(customerId: Long): List<BankAccount>
+  }
+  
+  interface AccountOperationRepository {
+    +findByBankAccountId(accountId: String): List<AccountOperation>
+    +findByBankAccountId(accountId: String, pageable: Pageable): Page<AccountOperation>
+    +findByBankAccountIdOrderByOperationDateDesc(accountId: String, pageable: Pageable): Page<AccountOperation>
+  }
+  
+  interface AppUserRepository {
+    +findByUsername(username: String): AppUser
+  }
+  
+  interface AppRoleRepository {
+    +findByRoleName(roleName: String): AppRole
+  }
+}
+
+' Package DTOs
+package "DTOs" {
+  class CustomerDTO {
+    -id: Long
+    -name: String
+    -email: String
+    -phone: String
+  }
+  
+  abstract class BankAccountDTO {
+    -id: String
+    -balance: double
+    -createdAt: Date
+    -status: AccountStatus
+    -customerDTO: CustomerDTO
+    -type: String
+  }
+  
+  class CurrentAccountDTO {
+    -overDraft: double
+    -currency: String
+  }
+  
+  class SavingAccountDTO {
+    -interestRate: double
+    -status: AccountStatus
+    -type: String
+    -currency: String
+  }
+  
+  class AccountOperationDTO {
+    -id: Long
+    -operationDate: Date
+    -amount: double
+    -description: String
+    -type: OperationType
+    -bankAccountId: String
+  }
+  
+  class AccountHistoryDTO {
+    -accountId: String
+    -balance: double
+    -currentPage: int
+    -totalPages: int
+    -pageSize: int
+    -accountOperationDTOS: List<AccountOperationDTO>
+  }
+}
+
+' Package Enums
+package "Enums" {
+  enum AccountStatus {
+    CREATED
+    ACTIVATED
+    SUSPENDED
+    BLOCKED
+  }
+  
+  enum OperationType {
+    DEBIT
+    CREDIT
+  }
+}
+
+' Package Mappers
+package "Mappers" {
+  class BankAccountMapperImpl {
+    +fromCustomer(customer: Customer): CustomerDTO
+    +fromCustomerDTO(customerDTO: CustomerDTO): Customer
+    +fromSavingAccount(savingAccount: SavingAccount): SavingAccountDTO
+    +fromSavingAccountDTO(savingAccountDTO: SavingAccountDTO): SavingAccount
+    +fromCurrentAccount(currentAccount: CurrentAccount): CurrentAccountDTO
+    +fromCurrentAccountDTO(currentAccountDTO: CurrentAccountDTO): CurrentAccount
+    +fromAccountOperation(accountOperation: AccountOperation): AccountOperationDTO
+  }
+}
+
+' Package Exceptions
+package "Exceptions" {
+  class CustomerNotFoundException {
+    +CustomerNotFoundException(message: String)
+  }
+  
+  class BankAccountNotFoundException {
+    +BankAccountNotFoundException(message: String)
+  }
+  
+  class BalanceNotSufficientException {
+    +BalanceNotSufficientException(message: String)
+  }
+}
+
+' Package JWT
+package "JWT" {
+  class JwtUtils {
+    -jwtSecret: String
+    -jwtExpirationMs: long
+    +generateJwtToken(authentication: Authentication): String
+    +getUsernameFromJwtToken(token: String): String
+    +validateJwtToken(authToken: String): boolean
+  }
+}
+
+' Relations
+BankAccount <|-- SavingAccount
+BankAccount <|-- CurrentAccount
+Customer "1" --* "many" BankAccount
+BankAccount "1" --* "many" AccountOperation
+AppUser "many" -- "many" AppRole
+
+BankAccountService <|.. BankAccountServiceImpl
+SecurityService <|.. SecurityServiceImpl
+
+CustomerRestController --> BankAccountService
+BankAccountRestController --> BankAccountService
+AuthController --> SecurityService
+AuthController --> JwtUtils
+UserManagementController --> SecurityService
+
+BankAccountServiceImpl --> CustomerRepository
+BankAccountServiceImpl --> BankAccountRepository
+BankAccountServiceImpl --> AccountOperationRepository
+BankAccountServiceImpl --> BankAccountMapperImpl
+
+SecurityServiceImpl --> AppUserRepository
+SecurityServiceImpl --> AppRoleRepository
+
+BankAccountDTO <|-- CurrentAccountDTO
+BankAccountDTO <|-- SavingAccountDTO
+
+@enduml

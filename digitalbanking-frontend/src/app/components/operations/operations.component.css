@@ -1,0 +1,29 @@
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.account-summary {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.pagination {
+  margin-bottom: 0;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1) !important;
+}

@@ -1,0 +1,76 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0">{{ formTitle }}</h3>
+        </div>
+        <div class="card-body">
+          <div *ngIf="isLoading" class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+          
+          <div *ngIf="successMessage" class="alert alert-success">
+            {{ successMessage }}
+          </div>
+          
+          <form [formGroup]="customerForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="name" 
+                formControlName="name"
+                [ngClass]="{'is-invalid': customerForm.controls['name'].invalid && customerForm.controls['name'].touched}"
+              >
+              <div *ngIf="customerForm.controls['name'].invalid && customerForm.controls['name'].touched" class="invalid-feedback">
+                <div *ngIf="customerForm.controls['name'].errors?.['required']">Name is required</div>
+                <div *ngIf="customerForm.controls['name'].errors?.['minlength']">Name must be at least 2 characters</div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                formControlName="email"
+                [ngClass]="{'is-invalid': customerForm.controls['email'].invalid && customerForm.controls['email'].touched}"
+              >
+              <div *ngIf="customerForm.controls['email'].invalid && customerForm.controls['email'].touched" class="invalid-feedback">
+                <div *ngIf="customerForm.controls['email'].errors?.['required']">Email is required</div>
+                <div *ngIf="customerForm.controls['email'].errors?.['email']">Please enter a valid email address</div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="phone" 
+                formControlName="phone"
+              >
+            </div>
+            
+            <div class="d-flex justify-content-between">
+              <a routerLink="/customers" class="btn btn-secondary">Cancel</a>
+              <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid || isLoading">
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                {{ submitButtonText }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

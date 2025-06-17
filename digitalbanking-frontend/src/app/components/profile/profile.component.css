@@ -1,0 +1,22 @@
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.initials {
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}

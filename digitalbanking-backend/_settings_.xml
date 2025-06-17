@@ -1,0 +1,15 @@
+<settings>
+  <proxies>
+    <proxy>
+      <id>optional</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>proxyhost</host>
+      <port>proxyport</port>
+      <!-- Add if authentication is required -->
+      <username>proxyuser</username>
+      <password>proxypass</password>
+      <nonProxyHosts>localhost|127.0.0.1</nonProxyHosts>
+    </proxy>
+  </proxies>
+</settings>

@@ -1,0 +1,65 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Dashboard</h1>
+
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <h5 class="card-title">Total Customers</h5>
+          <p class="card-text fs-4">{{ totalCustomers }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-success">
+        <div class="card-body">
+          <h5 class="card-title">Total Accounts</h5>
+          <p class="card-text fs-4">{{ totalAccounts }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-info">
+        <div class="card-body">
+          <h5 class="card-title">Total Balance</h5>
+          <p class="card-text fs-4">{{ totalBalance | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <div class="card">
+        <div class="card-header">
+          Account Types
+        </div>
+        <div class="card-body">
+          <canvas baseChart class="chart"
+            [data]="accountTypesChartData"
+            [options]="accountTypesChartOptions"
+            [type]="accountTypesChartType"
+            [legend]="accountTypesChartLegend"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card">
+        <div class="card-header">
+          Account Statuses
+        </div>
+        <div class="card-body">
+          <canvas baseChart class="chart"
+            [data]="accountStatusesChartData"
+            [options]="accountStatusesChartOptions"
+            [type]="accountStatusesChartType"
+            [legend]="accountStatusesChartLegend">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

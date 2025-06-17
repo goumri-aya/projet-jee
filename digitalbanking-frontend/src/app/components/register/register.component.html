@@ -1,0 +1,79 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0">Register</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            
+            <div *ngIf="errorMessage" class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+            
+            <div *ngIf="successMessage" class="alert alert-success">
+              {{ successMessage }}
+            </div>
+            
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="username" 
+                formControlName="username" 
+                [ngClass]="{'is-invalid': isSubmitted && registerForm.controls['username'].errors}"
+              >
+              <div *ngIf="isSubmitted && registerForm.controls['username'].errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['username'].errors['required']">Username is required</div>
+                <div *ngIf="registerForm.controls['username'].errors['minlength']">Username must be at least 4 characters</div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input 
+                type="password" 
+                class="form-control" 
+                id="password" 
+                formControlName="password"
+                [ngClass]="{'is-invalid': isSubmitted && registerForm.controls['password'].errors}"
+              >
+              <div *ngIf="isSubmitted && registerForm.controls['password'].errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['password'].errors['required']">Password is required</div>
+                <div *ngIf="registerForm.controls['password'].errors['minlength']">Password must be at least 4 characters</div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="confirmedPassword" class="form-label">Confirm Password</label>
+              <input 
+                type="password" 
+                class="form-control" 
+                id="confirmedPassword" 
+                formControlName="confirmedPassword"
+                [ngClass]="{'is-invalid': isSubmitted && registerForm.controls['confirmedPassword'].errors}"
+              >
+              <div *ngIf="isSubmitted && registerForm.controls['confirmedPassword'].errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['confirmedPassword'].errors['required']">Please confirm your password</div>
+                <div *ngIf="registerForm.controls['confirmedPassword'].errors['passwordMismatch']">Passwords do not match</div>
+              </div>
+            </div>
+            
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary" [disabled]="isLoading || successMessage">
+                <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                Register
+              </button>
+            </div>
+            
+            <div class="mt-3 text-center">
+              <p>Already have an account? <a routerLink="/login">Login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="container-fluid p-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+      <h3>Customers</h3>
+      <div class="d-flex gap-2">
+        <a routerLink="/customer/new" class="btn btn-success">
+          <i class="bi bi-person-plus"></i> New Customer
+        </a>
+      </div>
+    </div>
+    
+    <div class="card-body">
+      <!-- Search bar -->
+      <div class="mb-3">
+        <div class="input-group">
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search customers by name or email..." 
+            [(ngModel)]="searchTerm"
+            (keyup.enter)="searchCustomers()"
+          >
+          <button class="btn btn-outline-primary" type="button" (click)="searchCustomers()">
+            <i class="bi bi-search"></i> Search
+          </button>
+          <button class="btn btn-outline-secondary" type="button" (click)="searchTerm = ''; loadCustomers()">
+            <i class="bi bi-x"></i> Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading spinner -->
+      <div class="text-center p-5" *ngIf="isLoading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Loading customers...</p>
+      </div>
+
+      <!-- Error message -->
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{ errorMessage }}
+        <button type="button" class="btn-close float-end" (click)="errorMessage = null"></button>
+      </div>
+
+      <!-- Customers table -->
+      <div class="table-responsive" *ngIf="!isLoading">
+        <table class="table table-striped table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngIf="customers.length === 0">
+              <td colspan="4" class="text-center">No customers found</td>
+            </tr>
+            <tr *ngFor="let customer of customers">
+              <td>{{ customer.id }}</td>
+              <td>{{ customer.name }}</td>
+              <td>{{ customer.email }}</td>
+              <td>
+                <div class="btn-group">
+                  <a [routerLink]="['/customer', customer.id]" class="btn btn-sm btn-info" title="View Details">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                  <a [routerLink]="['/customer/edit', customer.id]" class="btn btn-sm btn-warning" title="Edit">
+                    <i class="bi bi-pencil"></i>
+                  </a>
+                  <button (click)="deleteCustomer(customer.id)" class="btn btn-sm btn-danger" title="Delete">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card-footer text-end">
+      Total Customers: {{ customers.length }}
+    </div>
+  </div>
+</div>
